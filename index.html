@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFILTRADO | Adium Original Series</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #000;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .series-title { font-family: 'Cinzel', serif; letter-spacing: 0.2em; }
+        .brand-font { font-family: 'Cinzel', serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(to right, #000 15%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%),
+                        linear-gradient(to top, #000 10%, rgba(0,0,0,0) 50%);
+        }
+
+        .btn-netflix {
+            transition: all 0.3s ease;
+            background-color: #e50914;
+        }
+        .btn-netflix:hover {
+            background-color: #b20710;
+            transform: scale(1.05);
+        }
+
+        /* IMAGEN DE FONDO DESDE GOOGLE DRIVE */
+        .video-placeholder {
+            background: url('https://lh3.googleusercontent.com/d/1pWatzH-aw9dVydmYkIxyE0pC9UXOcteb') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+
+        .blur-backdrop {
+            backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .tips-text-logo {
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            color: #000;
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+
+        .avatar-box {
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        .card-zoom:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <nav class="fixed top-0 w-full z-50 px-8 py-4 flex justify-between items-center bg-gradient-to-b from-black via-black/80 to-transparent">
+        <div class="flex items-center space-x-8">
+            <span class="text-red-600 font-bold text-3xl tracking-tighter">ADIUM+</span>
+            <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest text-gray-300">
+                <a href="#" class="hover:text-white transition-colors">Inicio</a>
+                <a href="#" class="hover:text-white transition-colors">Series</a>
+                <a href="#" class="text-white border-b-2 border-red-600 pb-1">Pitch Licitación</a>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-6">
+            <i class="fas fa-search cursor-pointer text-sm"></i>
+            <i class="fas fa-bell cursor-pointer text-sm"></i>
+            
+            <div class="flex items-center space-x-2 cursor-pointer group">
+                <div class="avatar-box group-hover:scale-110 transition-transform">
+                    <span class="tips-text-logo text-xs">TIPS</span>
+                </div>
+                <i class="fas fa-caret-down text-[10px]"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative h-screen w-full flex items-center video-placeholder overflow-hidden">
+        <div class="absolute inset-0 hero-gradient"></div>
+        
+        <div class="relative z-10 px-6 md:px-24 max-w-4xl">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="bg-red-600 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Serie Original</span>
+                <span class="text-green-500 font-bold text-sm">92% Viscosuplementación 1A</span>
+            </div>
+            
+            <h1 class="series-title text-5xl md:text-9xl mb-4 drop-shadow-2xl font-bold uppercase leading-none text-white">Infiltrado</h1>
+            <h2 class="text-xl md:text-3xl font-light text-amber-500 mb-8 tracking-widest uppercase italic">"La mecánica del movimiento, restaurada."</h2>
+            
+            <p class="text-base md:text-lg text-gray-200 mb-10 max-w-2xl leading-relaxed font-light">
+                La Osteoartritis es una interrupción en la narrativa de vida. Esta campaña reescribe las reglas de la viscosuplementación con una estética cinematográfica de alto impacto para <span class="font-bold text-white">Deportólogos, traumatólogos y fisiatras +</span>.
+            </p>
+
+    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+    <button onclick="abrirPiloto()" class="btn-netflix flex items-center justify-center space-x-3 px-8 py-3 rounded text-lg font-bold shadow-2xl w-full sm:w-auto min-w-[180px]">
+        <i class="fas fa-play"></i>
+        <span>Ver Piloto El Agente Biológico</span>
+    </button>
+
+    <button onclick="abrirEstrategia()" class="bg-white/10 hover:bg-white/20 flex items-center justify-center space-x-3 px-8 py-3 rounded text-lg font-bold blur-backdrop border border-white/10 transition-all w-full sm:w-auto min-w-[180px]">
+        <i class="fas fa-info-circle"></i>
+        <span>Ver Estrategia</span>
+    </button>
+</div>
+        </div>
+    </div>
+
+    <div class="px-12 md:px-24 py-20 bg-black relative z-20">
+        <h3 class="text-2xl font-bold mb-10 text-gray-100 flex items-center uppercase tracking-tighter">
+            <span class="w-2 h-8 bg-red-600 mr-4"></span>
+            LA CIENCIA DEL MOVIMIENTO
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="group cursor-pointer">
+                <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden relative border-2 border-transparent group-hover:border-red-600 transition-all shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-all">
+                    <div class="absolute bottom-4 left-4">
+                        <div class="text-[10px] text-red-500 font-bold uppercase">Episodio 1</div>
+                        <div class="font-bold text-white text-sm">El Diagnóstico Zero</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden relative border-2 border-transparent group-hover:border-red-600 transition-all shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-all">
+                    <div class="absolute bottom-4 left-4">
+                        <div class="text-[10px] text-red-500 font-bold uppercase">Episodio 2</div>
+                        <div class="font-bold text-white text-sm">Infiltración Dorada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden relative border-2 border-transparent group-hover:border-red-600 transition-all shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-all">
+                    <div class="absolute bottom-4 left-4">
+                        <div class="text-[10px] text-red-500 font-bold uppercase">Episodio 3</div>
+                        <div class="font-bold text-white text-sm">Élite Médica</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden relative border-2 border-transparent group-hover:border-red-600 transition-all shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-all">
+                    <div class="absolute bottom-4 left-4">
+                        <div class="text-[10px] text-red-500 font-bold uppercase">Episodio 4</div>
+                        <div class="font-bold text-white text-sm">Movilidad Total</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-12 md:px-24 py-16 bg-gradient-to-b from-black to-zinc-950">
+        <h3 class="text-xl font-bold mb-8 text-gray-400 flex items-center uppercase tracking-widest">
+            WEBINAR INFILTRADOS
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div class="group card-zoom cursor-pointer">
+                <div class="aspect-[2/3] bg-zinc-900 rounded-md overflow-hidden relative border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-3 left-3">
+                        <p class="text-[10px] font-bold text-red-600 uppercase">Metabolismo</p>
+                        <p class="text-xs font-bold text-white">Equilibrio Vital</p>
+                    </div>
+                </div>
+            </div>
+            <div class="group card-zoom cursor-pointer">
+                <div class="aspect-[2/3] bg-zinc-900 rounded-md overflow-hidden relative border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-3 left-3">
+                        <p class="text-[10px] font-bold text-red-600 uppercase">Cardio</p>
+                        <p class="text-xs font-bold text-white">Ritmo Maestro</p>
+                    </div>
+                </div>
+            </div>
+            <div class="group card-zoom cursor-pointer">
+                <div class="aspect-[2/3] bg-zinc-900 rounded-md overflow-hidden relative border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-3 left-3">
+                        <p class="text-[10px] font-bold text-red-600 uppercase">Neurología</p>
+                        <p class="text-xs font-bold text-white">Sinapsis 2.0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="group card-zoom cursor-pointer">
+                <div class="aspect-[2/3] bg-zinc-900 rounded-md overflow-hidden relative border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-3 left-3">
+                        <p class="text-[10px] font-bold text-red-600 uppercase">Urología</p>
+                        <p class="text-xs font-bold text-white">Flujo Constante</p>
+                    </div>
+                </div>
+            </div>
+            <div class="group card-zoom cursor-pointer">
+                <div class="aspect-[2/3] bg-zinc-900 rounded-md overflow-hidden relative border border-white/5">
+                    <div class="w-full h-full flex items-center justify-center bg-zinc-800">
+                        <i class="fas fa-plus text-2xl text-zinc-600 group-hover:text-red-600 transition-colors"></i>
+                    </div>
+                    <div class="absolute bottom-3 left-3">
+                        <p class="text-[10px] font-bold text-zinc-500 uppercase">Próximamente</p>
+                        <p class="text-xs font-bold text-zinc-400">Ver Catálogo Adium+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-zinc-950 py-24 border-y border-white/5 relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-red-900/10 to-transparent"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-12 text-center">
+            <h3 class="series-title text-3xl md:text-4xl mb-6 text-white uppercase tracking-wider">Únete a la nueva era de Adium</h3>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto text-lg">Transformando la comunicación médica en una experiencia premium.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <div class="relative w-full md:w-96">
+                    <input type="email" placeholder="Correo corporativo" class="w-full bg-zinc-900 border border-zinc-700 px-6 py-4 rounded text-white focus:outline-none focus:border-red-600 transition-colors">
+                </div>
+                <button class="btn-netflix px-12 py-4 rounded font-bold text-lg w-full md:w-auto uppercase tracking-widest text-white">Suscribir</button>
+            </div>
+            <div class="mt-8 flex justify-center items-center space-x-4 text-sm text-gray-500 font-bold uppercase tracking-widest cursor-pointer hover:text-white transition-colors">
+                <span>Ver planes de medios</span>
+                <i class="fas fa-chevron-right text-[10px]"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-32 bg-gradient-to-t from-red-950/40 via-black to-black flex flex-col items-center border-t border-white/5">
+        <h2 class="series-title text-4xl md:text-5xl mb-16 uppercase tracking-[0.4em] text-center text-white">¿Damos luz verde?</h2>
+        
+        <div class="flex items-center bg-white/5 px-16 py-12 rounded-3xl border border-white/10 shadow-[0_30px_100px_rgba(0,0,0,0.8)] backdrop-blur-3xl">
+            <div class="text-center">
+                <span class="block font-bold text-6xl md:text-7xl tracking-tighter text-white leading-none brand-font uppercase">Tips</span>
+                <div class="h-1 w-24 bg-red-600 mx-auto mt-4"></div>
+                <span class="block text-sm uppercase tracking-[0.5em] text-red-600 font-extrabold mt-6">Imagen y Comunicación</span>
+                <div class="flex items-center justify-center mt-10 space-x-6 text-gray-400 text-xs uppercase tracking-widest font-bold">
+                    <span>Estrategia Creativa</span>
+                    <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+                    <span>Adium 2026</span>
+                </div>
+            </div>
+        </div>
+        
+        <p class="mt-20 text-gray-800 text-[10px] uppercase tracking-[0.6em] font-bold">Propuesta Creativa • Contenido Confidencial</p>
+    </div>
+<div id="modal-estrategia" style="display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; padding: 20px;">
+    <div style="max-width: 800px; background: #141414; border: 1px solid #333; border-radius: 12px; position: relative; padding: 40px; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
+        <button onclick="cerrarEstrategia()" style="position: absolute; top: 15px; right: 20px; font-size: 35px; color: #666; cursor: pointer; background:none; border:none; line-height: 1;">&times;</button>
+        <div style="color: #eee; line-height: 1.6; font-size: 18px; font-family: 'Inter', sans-serif;">
+            <p>¿A quién no le gusta una serie en streaming? - Nadie</p>
+            <p>¿Quién no conecta con una historia bien contada? - Nadie</p>
+            <p>¿Qué busca todo ser humano? - Evitar el dolor y buscar el placer</p>
+
+            <br>
+            <p>Por eso creamos una serie tipo Netflix para elevar el storytelling a un nivel superior, porque ver series produce placer. Y si la serie cuenta historias para evitar el dolor con viscosuplementación temprana, los pacientes y especialistas conectarán emocionalmente con esta idea.</p>
+            <p>Nuestra propuesta es completamente disruptiva.</p>
+
+            <p>Proponemos un concepto creativo que vincula educación, entretenimiento y ciencia.</p>
+            <p>No es una campaña, es una serie original, donde el protagonista es VS (la Viscosuplementación) y el antagonista la osteoartritis.</p>
+            <p>No haremos anuncios, crearemos episodios.</p>
+            <p>Dejamos de vender un fármaco para vender entretenimiento educativo (Eduentretenimiento).</p>
+
+            <br>
+            <p style="color: white; font-weight: bold; border-left: 4px solid #e50914; padding-left: 15px;">En 2026, el contenido sigue siendo el rey del marketing, y el formato streaming es su trono. Por lo cual, Infiltrado se presenta como una “plataforma” que simula el streaming para conectar con pacientes y especialistas de la medicina.</p>
+        </div>
+    </div>
+</div>
+<script>
+    // Funciones para Estrategia
+    function abrirEstrategia() {
+        document.getElementById('modal-estrategia').style.display = 'flex';
+        document.body.style.overflow = 'hidden'; 
+    }
+    function cerrarEstrategia() {
+        document.getElementById('modal-estrategia').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Funciones para Piloto
+    function abrirPiloto() {
+        document.getElementById('modal-piloto').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function cerrarPiloto() {
+        document.getElementById('modal-piloto').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+</script>
+<div id="modal-piloto" style="display: none; position: fixed; inset: 0; z-index: 110; background: rgba(0,0,0,0.98); align-items: center; justify-content: center; padding: 20px;">
+    <div style="max-width: 900px; width: 100%; background: #000; border: 1px solid #333; border-radius: 8px; position: relative; overflow: hidden; box-shadow: 0 0 50px rgba(229, 9, 20, 0.2);">
+        
+        <button onclick="cerrarPiloto()" style="position: absolute; top: 20px; right: 20px; font-size: 30px; color: white; cursor: pointer; background:rgba(0,0,0,0.5); border:none; width:40px; height:40px; border-radius:50%; z-index: 10;">&times;</button>
+        
+        <div style="aspect-ratio: 16/9; background: #141414; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-bottom: 4px solid #e50914;">
+            <i class="fas fa-film text-6xl text-zinc-800 mb-6"></i>
+            <h2 class="series-title text-3xl md:text-5xl text-white font-bold mb-4 uppercase tracking-widest">Infiltrado</h2>
+            <p class="text-red-600 font-bold text-xl tracking-[0.3em] animate-pulse">NEW SEASON COMING SOON</p>
+            <div class="mt-8 flex space-x-4">
+                <div class="h-1 w-12 bg-white/20 rounded"></div>
+                <div class="h-1 w-12 bg-white/20 rounded"></div>
+                <div class="h-1 w-12 bg-white/20 rounded"></div>
+            </div>
+        </div>
+
+        <div style="padding: 30px; background: linear-gradient(to bottom, #141414, #000);">
+            <div class="flex items-center space-x-4 mb-4">
+                <span class="text-green-500 font-bold">92% Viscosuplementación</span>
+                <span class="text-zinc-400 border border-zinc-400 px-2 py-0.5 text-xs">4K Ultra HD</span>
+            </div>
+            <p class="text-zinc-300 text-lg italic">"El Agente Biológico: Una mirada profunda a la restauración del movimiento articular."</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
